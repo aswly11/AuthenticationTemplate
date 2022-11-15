@@ -1,0 +1,16 @@
+﻿Login
+
+@{ 
+    var errmsg = TempData["Error"] as string;
+
+
+}
+@if (!string.IsNullOrEmpty(errmsg)) { 
+<h3 class="text-danger">@errmsg</h3>
+
+}
+<form method="post" action="/login?ReturnUrl= @System.Net.WebUtility.UrlEncode(ViewData["ReturnUrl"] as string)">
+    <input type="text" name="username" value="" placeholder="Enter Username" />
+    <input type="password" name="password" value="" placeholder="Enter password" />
+    <input type="submit" value="Login" />
+</form>

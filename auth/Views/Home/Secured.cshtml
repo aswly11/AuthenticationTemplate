@@ -1,0 +1,9 @@
+﻿
+Top Secret
+
+<h1>@User.Identity.Name</h1>
+@foreach (var item in User.Claims) {
+<span>@item.Type :  @item.Value</span>    
+<br />
+
+}   
